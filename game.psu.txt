@@ -1,0 +1,38 @@
+# Sample pseudocode for "PEMDAS Space Quest"
+
+# Initialize game variables
+score = 0
+level = 1
+
+# Define asteroid class with label and operation
+class Asteroid:
+    def __init__(self, operation, value):
+        self.operation = operation
+        self.value = value
+        # Additional properties like position can be added here
+
+# Generate asteroids for level
+def generate_asteroids(level):
+    # Depending on the level, create a list of asteroids with operations in mixed order
+    asteroids = [...]
+    return asteroids
+
+# Game loop
+while playing:
+    asteroids = generate_asteroids(level)
+    display_asteroids(asteroids)
+    
+    # Player input for which asteroid to destroy
+    player_choice = get_player_input()
+    
+    # Check if the choice follows PEMDAS
+    if correct_order(player_choice, asteroids):
+        destroy_asteroid(player_choice)
+        score += 10
+        # If all asteroids are destroyed in correct order, level up
+    else:
+        # Provide feedback and try again
+        score -= 5
+    
+    # Increase level difficulty and regenerate asteroids
+    level += 1
